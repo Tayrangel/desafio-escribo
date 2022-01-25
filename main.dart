@@ -2,8 +2,13 @@ import 'dart:io';
 
 void main() {
   int res = 0;
-  var x = stdin.readLineSync();
-  int num = int.parse(x!);
+  int num = 0;
+
+  do {
+    print("Digite um número inteiro positivo:");
+    var x = stdin.readLineSync();
+    num = int.parse(x!);
+  } while (num < 0);
 
   for (int i = 0; i < num; i++) {
     if (i % 3 == 0 || i % 5 == 0) res += i;
